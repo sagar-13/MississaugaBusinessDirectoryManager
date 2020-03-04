@@ -138,7 +138,7 @@ class View():
         else: 
             menubar = Menu(self.root)
             sysmenu = Menu(menubar, name="system")
-            menubar.add_cascade(sysmenu)
+            menubar.add_cascade(menu=sysmenu)
   
         # File Menu
         menu_file = Menu(menubar)
