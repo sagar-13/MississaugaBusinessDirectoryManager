@@ -132,7 +132,7 @@ class View():
 
          # Create the menu
         # magic names for each menu
-        if (self.root.tk.call('tk', 'windowingsystem') != "win32"):
+        if (self.root.tk.call('tk', 'windowingsystem') not in ["win32" or "win64"]):
             menubar = Menu(self.root, name="apple")
            
         else: 
