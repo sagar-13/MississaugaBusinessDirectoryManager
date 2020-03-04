@@ -136,7 +136,9 @@ class View():
             menubar = Menu(self.root, name="apple")
            
         else: 
-            menubar = Menu(self.root, name='system')
+            menubar = Menu(self.root)
+            sysmenu = Menu(menubar, name="system")
+            menubar.add_cascade(sysmenu)
   
         # File Menu
         menu_file = Menu(menubar)
