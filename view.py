@@ -147,11 +147,11 @@ class View():
         menubar.add_cascade(menu=menu_file, label="File")
         
         # MacOS help and window menus 
-        if (self.root.tk.call('tk', 'windowingsystem') != "win32"):
-            help_menu_mac = Menu(menubar, name="help")
-            window_menu_mac = Menu(menubar, name="window")
-            menubar.add_cascade(menu=help_menu_mac, label="Help")
-            menubar.add_cascade(menu=window_menu_mac, label="Window")
+        # if (self.root.tk.call('tk', 'windowingsystem') != "win32"):
+        help_menu_mac = Menu(menubar, name="help")
+        window_menu_mac = Menu(menubar, name="window")
+        menubar.add_cascade(menu=help_menu_mac, label="Help")
+        menubar.add_cascade(menu=window_menu_mac, label="Window")
 
         self.root['menu'] = menubar
     
