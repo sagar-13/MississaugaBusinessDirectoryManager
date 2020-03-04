@@ -130,16 +130,19 @@ class View():
         self.scrollbary.grid(row=1, column=0, sticky='NSE')
         self.tv.grid(row=1, column=0, sticky="SW")
 
-         # Create the menu
+        
+
         # magic names for each menu
-        if (self.root.tk.call('tk', 'windowingsystem') not in ["win32" or "win64"]):
+        if (self.root.tk.call('tk', 'windowingsystem') != "win32"):
+            
             menubar = Menu(self.root, name="apple")
+            
+
            
         else: 
-            menubar = Menu(self.root)
-            sysmenu = Menu(menubar, name="system")
-            menubar.add_cascade(menu=sysmenu)
-  
+            menubar = Menu(self.root, name="system")
+   
+       
         # File Menu
         menu_file = Menu(menubar)
         menu_file.add_command(label="Show Record List", command=self.raise_treeview)
@@ -148,12 +151,11 @@ class View():
         menu_file.add_command(label="Quit", command=self.quit_app)
         menubar.add_cascade(menu=menu_file, label="File")
         
-        # MacOS help and window menus 
-        # if (self.root.tk.call('tk', 'windowingsystem') != "win32"):
-        help_menu_mac = Menu(menubar, name="help")
-        window_menu_mac = Menu(menubar, name="window")
-        menubar.add_cascade(menu=help_menu_mac, label="Help")
-        menubar.add_cascade(menu=window_menu_mac, label="Window")
+        help_menu = Menu(menubar, name="help")
+        window_menu = Menu(menubar, name="window")
+
+        menubar.add_cascade(menu=help_menu, label="Help")
+        menubar.add_cascade(menu=window_menu, label="Window")
 
         self.root['menu'] = menubar
     
