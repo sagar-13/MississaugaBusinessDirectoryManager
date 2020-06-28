@@ -12,7 +12,7 @@ Each field is valdiated with regex patterns and provides feedback regarding the 
 
 
 
-To run, 
+To run:
 
 ```
 
