@@ -9,3 +9,13 @@ Each field is valdiated with regex patterns and provides feedback regarding the 
 <img src="./Demo_Images/FieldEditor.png">
 
 <img src="./Demo_Images/Record Selector.png">
+
+
+
+To run, 
+
+```
+
+python controller.py
+
+```
